@@ -88,7 +88,7 @@ We welcome contributions to enhance the React/Next Game Explorer web app! To con
    ```bash
    git clone https://github.com/malikgaurav626/gameether.git
 
-Enjoy your gaming exploration journey with the React/Next Game Explorer web app! If you have any questions or need assistance, don't hesitate to reach out.
+Enjoy your gaming exploration journey with the Game Ether web app! If you have any questions or need assistance, don't hesitate to reach out.
 
 
 ## License
