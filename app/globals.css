@@ -1,107 +1,1040 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+@font-face {
+  font-family: collegan;
+  src: url('../public/fonts/Collegan.ttf');
+}
+@font-face {
+  font-family: intan;
+  src: url('../public/fonts/Intan.ttf');
+}
+@font-face {
+  font-family: newstar;
+  src: url('../public/fonts/Newstar.ttf');
+}
+/* AntiqueOli-Bol */
+@font-face {
+  font-family: 'AntiqueOli-Bol';
+  src: url('../public/fonts/AntiqueOli-Bol.ttf') format('truetype');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+/* AntiqueOli-Lig */
+@font-face {
+  font-family: 'AntiqueOli-Lig';
+  src: url('../public/fonts/AntiqueOli-Lig.ttf') format('truetype');
 }
 
-* {
-  box-sizing: border-box;
+/* AntiqueOli-Med */
+@font-face {
+  font-family: 'AntiqueOli-Med';
+  src: url('../public/fonts/AntiqueOli-Med.ttf') format('truetype');
+}
+
+/* AntiqueOli-Reg */
+@font-face {
+  font-family: 'AntiqueOli-Reg';
+  src: url('../public/fonts/AntiqueOli-Reg.ttf') format('truetype');
+}
+
+/* AntiqueOli-RegIta */
+@font-face {
+  font-family: 'AntiqueOli-RegIta';
+  src: url('../public/fonts/AntiqueOli-RegIta.ttf') format('truetype');
+}
+
+/* AntiqueOliCom-Reg */
+@font-face {
+  font-family: 'AntiqueOliCom-Reg';
+  src: url('../public/fonts/AntiqueOliCom-Reg.ttf') format('truetype');
+}
+
+/* AntiqueOliCom-RegIta */
+@font-face {
+  font-family: 'AntiqueOliCom-RegIta';
+  src: url('../public/fonts/AntiqueOliCom-RegIta.ttf') format('truetype');
+}
+
+/* AntiqueOliCon-Bol */
+@font-face {
+  font-family: 'AntiqueOliCon-Bol';
+  src: url('../public/fonts/AntiqueOliCon-Bol.ttf') format('truetype');
+}
+
+/* AntiqueOliCon-Reg */
+@font-face {
+  font-family: 'AntiqueOliCon-Reg';
+  src: url('../public/fonts/AntiqueOliCon-Reg.ttf') format('truetype');
+}
+
+/* AntiqueOliDCD-Med */
+@font-face {
+  font-family: 'AntiqueOliDCD-Med';
+  src: url('../public/fonts/AntiqueOliDCD-Med.ttf') format('truetype');
+}
+
+/* AntiqueOliDCD-Reg */
+@font-face {
+  font-family: 'AntiqueOliDCD-Reg';
+  src: url('../public/fonts/AntiqueOliDCD-Reg.ttf') format('truetype');
+}
+
+/* AntiqueOliNorD-Reg */
+@font-face {
+  font-family: 'AntiqueOliNorD-Reg';
+  src: url('../public/fonts/AntiqueOliNorD-Reg.ttf') format('truetype');
+}
+
+/* AntiqueOliNorD-RegIta */
+@font-face {
+  font-family: 'AntiqueOliNorD-RegIta';
+  src: url('../public/fonts/AntiqueOliNorD-RegIta.ttf') format('truetype');
+}
+
+/* AntiqueOliNorOutP-Reg */
+@font-face {
+  font-family: 'AntiqueOliNorOutP-Reg';
+  src: url('../public/fonts/AntiqueOliNorOutP-Reg.ttf') format('truetype');
+}
+
+/* AntiqueOliSC-Med */
+@font-face {
+  font-family: 'AntiqueOliSC-Med';
+  src: url('../public/fonts/AntiqueOliSC-Med.ttf') format('truetype');
+}
+
+/* AntiqueOliSC-Reg */
+@font-face {
+  font-family: 'AntiqueOliSC-Reg';
+  src: url('../public/fonts/AntiqueOliSC-Reg.ttf') format('truetype');
+}
+/* Import Causten Round Thin Oblique */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-ThinOblique.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Import Causten Round SemiBold Oblique */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-SemiBoldOblique.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Import Causten Round Regular Oblique */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-RegularOblique.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Import Causten Round Medium Oblique */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-MediumOblique.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Import Causten Round Light Oblique */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-LightOblique.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Import Causten Round ExtraLight Oblique */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-ExtraLightOblique.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Import Causten Round ExtraBold Oblique */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-ExtraBoldOblique.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Import Causten Round Black Oblique */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-BlackOblique.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Import Causten Round Bold Oblique */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-BoldOblique.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Import Causten Round Black */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Import Causten Round Bold */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Import Causten Round Thin */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Import Causten Round SemiBold */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Import Causten Round Regular */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Import Causten Round Medium */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Import Causten Round Light */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Import Causten Round ExtraLight */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Import Causten Round ExtraBold */
+@font-face {
+  font-family: 'Causten Round';
+  src: url('../public/fonts/CaustenRound-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+body{
+  /* background-color: rgb(238, 238, 238); */
+  /* background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,0.5964887175573355) 0%, rgba(253,29,29,0.6469088856245624) 50%, rgba(252,176,69,0.5320629472492122) 100%); */
+background: -webkit-linear-gradient(0deg, rgba(34,193,195,0.7337436195181197) 0%, rgba(253,187,45,0.663715608313638) 100%);
+background: linear-gradient(0deg, rgba(34,193,195,0.7337436195181197) 0%, rgba(253,187,45,0.663715608313638) 100%);
+
+  /* background-color: black !important; */
+  margin: 0;
+  padding: 0;
+  color: black !important;
+  /* color: white !important; */
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden !important;
+}
+.background-svg{
+  background-color: transparent;
+  width: 100% !important;
+  z-index: -300;
+}
+.background-container{
+  position: absolute;
+  width: 90%;
+  height: 75svh;
+  justify-content: center;
+  align-items: center;
+}
+.violet{
+  top: -20px;
+}
+.orange{
+  bottom: -60px;
+}
+.green{
+  top: -150px;
+}
+.surface{
+  margin: 5% 6%;
+  width: 100svw;
+  height: 90svh;
+  backdrop-filter: blur(5px);
+  background-color: rgba(100, 100, 100, 0.078);
+  z-index: 1;
+  border-radius: 30px;
+  border-bottom: 1px solid rgba(241, 241, 241, 0.536);
+  border-right: 1px solid rgba(254, 254, 254, 0.536);
+  border-left: 1px solid rgba(254, 254, 254, 0.536);
+  border-top: 1px solid rgba(254, 254, 254, 0.536);
+}
+.navbar{
+  border-radius: 30px;
+}
+.light-glass-btn{
+  border-radius: 5px;
+  border: 1px solid rgba(229, 229, 229, 0.445);
+  /* background-color: rgba(255, 255, 255, 0.427); */
+  background-color: #f8f8f857 !important;
+  backdrop-filter: blur(15px);
+  font-family: collegan;
+  color: black;
+  font-size: 15px;
+  padding: 10px 20px;
+  transition: 0.3s ease;
+  height: 43px;
+}
+.light-glass-btn:hover{
+  outline: 4px solid rgba(255, 255, 255, 0.497);
+  transition: 0.3s ease;
+}
+.light-glass-btn-light-border{
+  border: 1px solid rgb(241, 241, 241, 0.536);
+  outline: 0.5px solid rgba(255, 255, 255);
+  transition: 0.1s ease;
+}
+.light-glass-btn-light-border:hover{
+  outline: 4px solid rgba(241, 241, 241, 0.214);
+  transition: 0.1s ease;
+  color: white;
+}
+.canvas-class{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10000;
+  width: 100svw;
+  height: 100svh;
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+.main-heading{
+  font-family: AntiqueOliNorD-Reg;
+}
+.homepage{
+  font-family: collegan;
+  font-weight: bold;
+  scale: 0.7;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+  animation: scale_from_pseven_to_one 1.3s 0.5s 1 forwards;
+}
+
+.homee{
+  display: none;
+  scale: 0;
+  opacity: 0;
+}
+.title-screen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  letter-spacing: 3px;
+  height: 75svh;
+  flex-direction: column;
+}
+.title-subtitle{
+  font-family: collegan;
+  letter-spacing: 1px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.game-container{
+  padding: 2px;
+  position: relative;
+  list-style-type: none;
+  height: 86px;
+  overflow: hidden;
+}
+.game{
+  color: #F6FA70;
+  transition: 0.3s ease;
+}
+.ether{
+  color: white;
+  text-shadow: 0px 0px 3px #5ed1d1;
+  transition: 0.3s ease;
+}
+.to{
+  color: white;
+  transition: 0.3s ease;
+  text-shadow: 0px 0px 3px #5ed1d1;
+}
+.welcome{
+  color: white;
+  text-shadow: 0px 0px 3px #5ed1d1;
+  transition: 0.3s ease;
+}
+.title-container:hover .ether{
+  text-shadow: 0px 0px 3px #715df2;
+  transition: 0.3s ease;
+}
+.title-container:hover .to{
+  text-shadow: 0px 0px 3px #715df2;
+}
+.title-container:hover .welcome{
+  text-shadow: 0px 0px 2px #715df2;
+}
+.title-container:hover .game{
+  color: #FF0060;
+  transition: 0.3s ease;
+}
+.title-container:hover .it-out{
+  color: #715df2;
+  transition: 0.3s ease;
+}
+.it-out{
+  color: #F6FA70;
+  transition: 0.3s ease;
+}
+.it-out-container{
+  position: relative;
+  list-style-type: none;
+  height: 22px;
+  overflow: hidden;
+  padding: 0;
+  padding-left: 4px;
+}
+.me-container{
+  position: relative;
+  list-style-type: none;
+  height: 22px !important;
+  overflow: hidden;
+  padding: 0;
+  display: inline-block;
+}
+.me-btn li{
+  transition: 0.3s ease;
+}
+.me-btn:hover li{
+  transform: translateY(-22px);
+  color: red;
+  transition: 0.3s ease;
+}
+.title-container:hover li{
+  transform: translateY(-75px);
+  transition: 0.3s ease;
+}
+.title-container:hover li.it-out-li{
+  transform: translateY(-22px);
+  transition: 0.3s ease;
+}
+.navbar-toggler-icon{
+  background-color: rgba(255, 255, 255, 0);
+}
+.navbar-toggler{
+  border: 1px solid rgba(255, 255, 255, 0.263) !important;
+}
+.toggler-icon{
+  border-radius: 5px;
+  padding: 2px 12px;
+  padding-bottom: 5px;
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(254, 254, 254, 0.536);
+  background-color: rgba(255, 255, 255, 0.427);
+  transition: 0.3s ease;
+}
+.homepage-content{
+  height: 90%;
+  width: 700px;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  /* color: black; */
+  /* text-shadow: 0px 0px 1px black; #ddd287 #70d2c7*/
+  font-family: 'Causten Round';
+  font-weight: bolder;
+  padding: 12px 24px;
+  border-radius: 20px;
+  backdrop-filter: blur(25px);
+  /* background-color: rgba(255, 255, 255, 0.437); */
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.583);
+  border-bottom: 1px solid rgba(224, 228, 243, 0.583);
+  z-index: 2 !important;
+  /* scale: 0.8;
+  transition: 0.3s ease !important; */
+}
+.homepage-canvas{
+  /* z-index: -1 !important; */
+  z-index: -1 !important;
+  border-radius: 20px;
+  background: linear-gradient( to bottom, #ddd287, #70d2c7);
+  width: 100%;
+  height: 100%;
+}
+/* .homepage-content:hover{
+  scale: 1.0;
+  transition: 0.3s ease !important;
+} */
+.orange{
+  color: #715df2;
+  text-shadow: 0px 0px 1px white;
+}
+.green{
+  color: #FF0060;
+  text-shadow: 0px 0px 1px white;
+}
+.violet{
+  color: #715df2;
+  text-shadow: 0px 0px 1px #715df2;
+}
+.homesurface{
+  display: none;
+  opacity: 0;
+  scale: 0;
+}
+.dashboard-container
+{
+  
+  position: relative;
+  margin: 5% 6%;
+  width: 100svw !important;
+  height: 90svh !important;
+}
+.card-class{
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+.dashboard-element-name{
+  font-family: collegan !important;
+  padding-left: 5px;
+}
+.dashboard-element-release-date{
+  font-family: 'causten round' !important;
+  font-style: italic !important;
+  padding-left: 5px;
+}
+.card{
+  background-color: rgba(152, 152, 152, 0.266);
+  /* backdrop-filter: blur(1px); */
+  border: 0.5px solid rgba(255, 255, 255, 0.45);
+  min-height: 200px !important;
+}
+::-webkit-scrollbar{
+  width: 1px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(20, 20, 20);
+}
+.read-more-button{
   padding: 0;
   margin: 0;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.dashboard-element-synopsis{
+  padding-left: 5px !important;
+  font-family: 'causten round' !important;
+  font-weight: 500;
+}
+.platform-pills{
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 9px;
+  background-color: rgba(0, 0, 0, 0.27) !important;
+  backdrop-filter: blur(5px);
+  border: 0.5px solid rgba(255, 255, 255, 0.36);
+  font-family: 'causten round' !important;
+}
+.go-link{
+  cursor: pointer;
+}
+.go-link:hover .dashboard-element-name{
+  text-decoration: underline !important;
+}
+.offcanvas{
+  background-color: transparent !important;
+  backdrop-filter: blur(5px);
+  color: white;
+}
+.offcanvas-subtitle{
+  font-family: 'causten round' !important;
+  font-weight: 300;
+  font-size: 15px;
+  font-style: italic;
+}
+.offcanvas-genre-element{
+  border: 1px solid white;
+  font-family: 'causten round';
+}
+.offcanvas-genre-element:hover{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.offcanvas-company{
+  font-family: 'causten round' !important;
+  font-weight: 300;
+  font-size: 15px;
+  font-style: italic;
+  
+}
+.offcanvas-company-element{
+  text-decoration: underline !important;
+  font-family: 'causten round';
+}
+.offcanvas-platforms-element{
+  background-color: #ff6f61 !important;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-family: 'causten round';
+  border: 1px solid white;
+}
+.offcanvas-platforms-element:hover{
+  background-color: white !important;
+  color: #ff6f61;
+  border: 1px solid #ff6f61;
+}
+.offcanvas-summary{
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 5px;
+  font-family: 'causten round';
+}
+.offcanvas-cover{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+.cover-img{
+  border-radius: 15px;
+}
+.offcanvas-game-mode{
+  margin-left: 5px;
+  margin-right: 5px;
+  font-family: 'causten round';
+}
+.offcanvas-game-modes{
+  margin-left: 10px;
+}
+.keyword{
+  margin: 5px;
+  border: 1px solid #0dc652;
+  color: #0dc652;
+}
+.keyword:hover{
+  border: 1px solid white;
+  background-color: #0dc652;
+  color: white;
+}
+.offcanvas-keywords{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.offcanvas-video{
+  text-align: center;
+}
+.offcanvas-rating
+{
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: #715df2;
+  color: white;
+}
+.offcanvas-websites{
+  text-align: center;
+}
+.offcanvas-websites-link{
+  margin: 3px !important;
+  border: 1px solid white;
+}
+.videos{
+  border-radius: 10px;
+}
+.offcanvas-similars{
+  margin-top: 20px !important;
+}
+.button-57 {
+  position: relative !important;
+  overflow: hidden !important;
+  border: 1px solid #18181a30 !important;
+  color: #18181a !important;
+  border-radius: 5px;
+  display: inline-block !important;
+  font-size: 15px !important;
+  line-height: 15px !important;
+  padding: 10px 15px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  background: #ffffff59 !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  touch-action: manipulation !important;
+  transition: 0.3s ease;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.button-57 span:first-child {
+  position: relative !important;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1) !important;
+  z-index: 10 !important;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.button-57 span:last-child {
+  color: white !important;
+  display: block !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1) !important;
+  z-index: 100 !important;
+  opacity: 0 !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translateY(225%) translateX(-50%) !important;
+  height: 14px !important;
+  line-height: 13px !important;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.button-57:after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -50% !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgb(0, 0, 0) !important;
+  transform-origin: bottom center !important;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1) !important;
+  transform: skewY(30deg) scaleY(0) !important;
+  z-index: 50 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.button-57:hover:after {
+  transform-origin: bottom center !important;
+  transform: skewY(9.3deg) scaleY(2) !important;
+}
+
+.button-57:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%) !important;
+  opacity: 1 !important;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1) !important;
+}
+.button-57:hover{
+  border: 1px solid white !important;
+  transition: 0.3s ease;
+}
+.search-input{
+  background-color: #f8f8f891;
+  border: 1px solid rgba(255, 255, 255, 0.554);
+  /* margin: 10px; */
+  /* padding: 0; */
+  width: 50%;
+  outline: none;
+  border-radius: 45px !important;
+  transition: 0.1s ease;
+  font-family: 'causten round';
+  font-weight: bold;
+  padding-left: 15px;
+  height: 50px !important;
+}
+.search-input:focus{
+  outline: 4px solid rgba(255, 255, 255, 0.554);
+}
+.search-form{
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 30px !important;
+}
+.serach-container{
+  position: relative;
+}
+.search-input::placeholder{
+  font-family: 'causten round' !important;
+}
+.news-headline{
+  font-family: collegan;
+  width: 100%;
+  /* margin: 0; */
+}
+.news-img{
+  width: 100%;
+  /* max-height: 200px !important; */
+  height: auto;
+  border-radius: 15px;
+}
+.news-card{
+  min-height: 400px !important;
+  /* height: 85%; */
+}
+.news-card:hover .news-headline{
+  text-decoration: underline !important;
+}
+.news-card-body{
+  position: relative !important;
+}
+.news-date{
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+  border: 1px solid rgba(255, 255, 255, 0.355);
+  border-bottom: none;
+  border-right: none;
+  color: black;
+}
+.news-keyword-element{
+  margin: 3px;
+  transition: 0.2s ease;
+}
+#offcanvasNewsLabel{
+  font-family: collegan;
+}
+.news-offcanvas-date{
+  font-family: 'causten round';
+}
+.news-offcanvas-description{
+  font-family: 'causten round';
+}
+.news-keyword-element:hover{
+  transition: 0.2s ease;
+  border: black;
+  color: black;
+  background-color: white;
+}
+.news-offcanvas-provider-img{
+  width: 35px !important;
+  overflow: hidden;
+  height: 35px;
+}
+.news-offcanvas-source{
+  margin-top: 15px;
+}
+#originalfooter{
+  position: relative !important;
+  text-align: center;
+  width: 100%;
+}
+.showmore-btn-container{
+  text-align: center;
+}
+.showmore-btn{
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-family: collegan;
+}
+.showmore-btn:hover{
+  text-decoration: underline;
+}
+
+
+
+
+@keyframes scale_from_pseven_to_one {
+  0%{
+    scale: 0.7;
+    opacity: 0.5;
   }
+  100%{
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+  .search-input{
+    width: 60% !important;
+  }
+}
+@media (max-width: 768px) {
+  .surface{
+    margin: 5%;
+    height: 90svh;
+  }
+  .dashboard-container
+  {
+    margin: 5% !important;
+    height: 90svh !important;
+  }
+  .background-svg{
+    width: 100% !important;
+  }
+  #navbarCollapseId{
+    position: fixed !important;
+    top: 70px;
+    width: 100%;
+    z-index: 1000000;
+  }
+  #navbarCollapseId2{
+    /* position: fixed !important; */
+    top: 90px;
+    width: 100%;
+    z-index: 1000000;
+  }
+  .card{
+    height: fit-content;
+    min-height: 200px;
+  }
+  .search-input{
+    width: 80% !important;
+  }
+}
+@media (max-width: 598px) {
+  .videos{
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .surface{
+    margin: 2%;
+    height: 96svh;
+  }
+  .dashboard-container
+  {
+    margin: 2% !important;
+    height: 96svh !important;
+  }
+  .background-svg{
+    width: 150% !important;
+  }
+  .actualimage{
+    max-width: 100% !important;
+    max-height: fit-content !important;
+  }
+  .card{
+    backdrop-filter: blur(1px) !important;
+  }
+}
+/* @media (min-width: 598px)
+{
+  .offcanvas{
+    width: 600px !important;
+  }
+} */
+
+
+
+@media (max-width: 387px) {
+  .surface{
+    margin: 2%;
+    height: 96svh;
+  }
+  .dashboard-container
+  {
+    margin: 2% !important;
+    height: 96svh !important;
+  }
+  .background-svg{
+    width: 150% !important;
+    transform: translate(-90px, 40px);
+  }
+  /* .nav-item{
+    font-size: 10px;
+  } */
+  /* .me-container{
+    height: 15px !important;
+  }
+  .me-btn:hover .li{
+    transform: translateY(-10px) !important;
+  } */
+  .me-btn{
+    scale: 0.8;
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+  }
+  .welcome{
+    /* text-shadow: 1px 0px 3px #70d2c7; */
+    letter-spacing: 1px;
+  }
+  .game{
+    letter-spacing: 1px;
+  }
+  .ether{
+    letter-spacing: 1px;
+  }
+  .to{
+    letter-spacing: 1px;
+  }
+  .it-out{
+    letter-spacing: 1px;
+  }
+  .title-container{
+    font-family: 'causten round' !important;
+    font-weight: bolder;
+    letter-spacing: 0.1px !important;
+  }
+}
+
+
+
+
+
+
+.vapor-squad{
+  font-family: collegan;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* letter-spacing: 1.4px !important; */
+}
+.vapor{
+  color: #f7ff00 !important;
+  
+}
+.squad{
+  color: #00bf8f !important;
 }
