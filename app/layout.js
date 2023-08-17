@@ -12,6 +12,7 @@ import Dashboard from "./dashboard";
 import { getAuthToken } from "./apicalls";
 import { setDotMatrix } from "./store";
 import Script from "next/script";
+import { Head } from "next/document";
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -21,16 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <Provider store={store}>
       <html lang="en">
-        <body className="body-class">
-          {/* <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-T52373PH"
-              height="0"
-              width="0"
-              style="display:none;visibility:hidden"
-            ></iframe>
-          </noscript>
-
+        <head>
           <Script
             id="gtm-script"
             strategy="afterInteractive"
@@ -43,7 +35,17 @@ export default function RootLayout({ children }) {
     })(window,document,'script','dataLayer', 'GTM-T52373PH');
   `,
             }}
-          /> */}
+          />
+        </head>
+        <body className="body-class">
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-T52373PH"
+              height="0"
+              width="0"
+              style="display:none;visibility:hidden"
+            ></iframe>
+          </noscript>
           <MainBody>
             <Base>{children}</Base>
           </MainBody>
