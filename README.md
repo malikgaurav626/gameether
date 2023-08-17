@@ -1,4 +1,4 @@
-# GameEther Web App
+# GameEther
 a minimalist approach to discovering & exploring games.
 
 ![App Screenshot](https://i.ibb.co/Qr3HwNf/etherV7.png)
