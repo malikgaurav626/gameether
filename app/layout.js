@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <Provider store={store}>
       <html lang="en">
         <body className="body-class">
-          <noscript>
+          {/* <noscript>
             <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-T52373PH"
               height="0"
@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
     })(window,document,'script','dataLayer', 'GTM-T52373PH');
   `,
             }}
-          />
+          /> */}
           <MainBody>
             <Base>{children}</Base>
           </MainBody>
