@@ -12,11 +12,6 @@ import Dashboard from "./dashboard";
 import { getAuthToken } from "./apicalls";
 import { setDotMatrix } from "./store";
 
-export const metadata = {
-  title: "Game Ether",
-  description: "A Global Game Directory",
-};
-
 export default function RootLayout({ children }) {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
