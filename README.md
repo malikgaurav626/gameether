@@ -5,6 +5,7 @@ a minimalist approach to discovering & exploring games.
 
 Welcome to the GameEther web app! This app allows you to explore, discover, search, and stay up-to-date with the latest news about your favorite games. With a focus on aesthetics and a solid user experience, you'll enjoy every moment of using this app. Check It Out and lemme know what you think or give me suggestions to improve this app.
 
+Demo ->> [Game Ether](https://gameether.netlify.app)
 
 ## Quick Links
 
